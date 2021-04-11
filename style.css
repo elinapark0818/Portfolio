@@ -1,0 +1,78 @@
+:root {
+    --text-color: #e57373;
+    --background-color: #fbe9e7;
+    --accent-color: #78002e;
+}
+
+body {
+    margin: 0;
+    font-family: "Roboto Light";
+
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color);
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-image:url("img/home_background.png");
+    background-repeat: no-repeat;
+    padding: 20px 50px;
+}
+
+.navbar__logo {
+    font-size: 24px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.navbar__logo img {
+    width: 10%;
+    height: 10%;
+    border-radius: 50%;
+}
+
+.navbar__logo li {
+    list-style-type: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar__menu {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+.navbar__menu li {
+    padding: 8px 12px;
+}
+
+.navbar__menu li:hover {
+    background-color: var(--background-color);
+    border-radius: 4px;
+}
+
+.navbar__icon {
+    list-style: none;
+    color: var(--text-color);
+    display: flex;
+    padding-left: 0;
+}
+
+.navbar__icon li {
+    padding: 8px 12px;
+}
+
+.navbar__icon li:hover {
+    background-color: var(--text-color);
+    color: var(--background-color);
+    border-radius: 4px;
+}
