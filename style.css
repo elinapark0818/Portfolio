@@ -43,12 +43,23 @@ body {
 
 a {
     text-decoration: none;
-    color: var(--color-white);
+    color: var(--color-pink);
 }
 
 ul {
     list-style-type: none;
     padding-left: 0;
+}
+
+li {
+    list-style-type: none;
+}
+
+button {
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    outline: none;
 }
 
 /*Typography*/
@@ -96,8 +107,8 @@ p {
 }
 
 .navbar__logo img {
-    width: 200px;
-    height: 200px;
+    width: 100px;
+    height: 100px;
 }
 
 .navbar__menu {
@@ -119,4 +130,34 @@ p {
 .navbar__menu__item:hover {
     color: var(--color-pink-white);
     background-color: var(--color-pink);
+}
+
+/*Home*/
+
+#home {
+    background: url("img/home_background.png") center/cover no-repeat;
+    padding: 40px;
+    text-align: center;
+}
+
+.home__avatar {
+    width: 250px;
+    height: 300px;
+    border-radius: 50%;
+    border: 2px solid var(--color-pink-white);
+}
+
+.home__title,
+.home__description {
+    color: var(--color-pink-white);
+}
+
+.home__contact {
+    font-size: var(--font-regular);
+    font-weight: var(--weight-bold);
+    margin: 24px;
+    padding: 8px 12px;
+    border: 2px solid var(--color-white);
+    border-radius: var(--size-border-radius);
+    color: var(--color-pink-white);
 }
