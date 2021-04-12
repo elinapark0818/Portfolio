@@ -1,19 +1,16 @@
 /*Global*/
 :root {
     /*Color*/
-    --text-color: #e57373;
-    --background-color: #fbe9e7;
-    --accent-color: #78002e;
     --color-white: #ffffff;
     --color-dark-white: #eeeeee;
     --color-pink-white: #fbe9e7;
     --color-pink: #f06292;
     --color-dark-pink: #ba2d65;
     --color-deep-pink: #78002e;
-    --color-black: #212121;
-    --color-deep-black: #000000;
-    --color-grey: #616161;
     --color-light-grey: #bdbdbd;
+    --color-grey: #616161;
+    --color-deep-grey: #212121;
+    --color-deep-black: #000000;
     --color-light-yellow: #fff59d;
     --color-light-orange: #ffa726;
 
@@ -46,7 +43,7 @@ body {
 
 a {
     text-decoration: none;
-    color: var(--text-color);
+    color: var(--color-pink);
     justify-content: center;
     align-items: center;
 }
@@ -90,13 +87,13 @@ a {
 }
 
 .navbar__menu li:hover {
-    background-color: var(--background-color);
+    background-color: var(--color-dark-pink);
     border-radius: 4px;
 }
 
 .navbar__icon {
     list-style: none;
-    color: var(--text-color);
+    color: var(--color-pink));
     display: flex;
     padding-left: 0;
 }
@@ -106,8 +103,8 @@ a {
 }
 
 .navbar__icon li:hover {
-    background-color: var(--text-color);
-    color: var(--background-color);
+    background-color: var(--color-pink);
+    color: var(--color-pink-white);
     border-radius: 4px;
 }
 
