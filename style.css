@@ -76,3 +76,13 @@ a {
     color: var(--background-color);
     border-radius: 4px;
 }
+
+.navbar__contents {
+    display: block;
+    list-style: none;
+}
+
+.navbar__contents #Me {
+    width : 200px;
+    border-radius: 50%;
+}
