@@ -1,7 +1,41 @@
+/*Global*/
 :root {
+    /*Color*/
     --text-color: #e57373;
     --background-color: #fbe9e7;
     --accent-color: #78002e;
+    --color-white: #ffffff;
+    --color-dark-white: #eeeeee;
+    --color-pink-white: #fbe9e7;
+    --color-pink: #f06292;
+    --color-dark-pink: #ba2d65;
+    --color-deep-pink: #78002e;
+    --color-black: #212121;
+    --color-deep-black: #000000;
+    --color-grey: #616161;
+    --color-light-grey: #bdbdbd;
+    --color-light-yellow: #fff59d;
+    --color-light-orange: #ffa726;
+
+    /*Font size*/
+    --font-large: 48px;
+    --font-medium: 28px;
+    --font-regular: 18px;
+    --font-small: 16px;
+    --font-micro: 14px;
+
+    /*Font weight*/
+    --weight-bold: 700;
+    --weight-semi-bold: 600;
+    --weight-regular: 400;
+
+    /*Size*/
+
+}
+
+/*Universal tags*/
+* {
+    box-sizing: border-box;
 }
 
 body {
