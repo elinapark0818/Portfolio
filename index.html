@@ -22,11 +22,10 @@
     >
     <link href="img/favicon.png" rel="icon" type="images/png">
     <link rel="stylesheet" href="style.css">
-    <script src="main.js" defer></script>
 </head>
 <body>
 <!--Navbar-->
-<nav id="navbar">
+<nav id="navbar" class="">
     <div class="navbar__logo">
         <ul>
             <li><img src="img/navbar__logo.png" alt="navbar_logo"></li>
@@ -40,19 +39,25 @@
         <li class="navbar__menu__item">Projects</li>
         <li class="navbar__menu__item">Contact</li>
     </ul>
+    <!--    Toggle button     -->
+    <button class="navbar__toggle-btn">
+        <i class="fas fa-bars"></i>
+    </button>
 </nav>
 
 <!--Home-->
 <section id="home">
     <ul>
-    <li><img
-            src="img/Me.jpg"
-            alt="Elina's profile photo"
-            class="home__avatar"
-    ></li>
-    <li><h1 class="home__title">Hello, <br>I'm Elina</h1></li>
-    <li><h2 class="home__description">Roopretelcham! I make everything</h2></li>
-    <li><button class="home__contact">Contact Me!</button></li>
+        <li><img
+                src="img/Me.jpg"
+                alt="Elina's profile photo"
+                class="home__avatar"
+        ></li>
+        <li><h1 class="home__title">Hello, <br>I'm Elina</h1></li>
+        <li><h2 class="home__description">Roopretelcham! I make everything</h2></li>
+        <li>
+            <button class="home__contact">Contact Me!</button>
+        </li>
     </ul>
 </section>
 
@@ -192,14 +197,18 @@
         <h1>My work</h1>
         <h3>Projects</h3>
         <div class="work__categories">
-            <button class="category__btn selected" data-filter="*">All
-                <span class="category__count">5</span></button>
-            <button class="category__btn" data-filter="Website">Website
-                <span class="category__count">2</span></button>
-            <button class="category__btn" data-filter="Mini-games">Mini-games
-                <span class="category__count">2</span></button>
-            <button class="category__btn" data-filter="Full-stack">Full-stack
-                <span class="category__count">1</span></button>
+            <button class="category__btn selected" data-filter="*">
+                All <span class="category__count">6</span>
+            </button>
+            <button class="category__btn" data-filter="Website">
+                Website<span class="category__count">2</span>
+            </button>
+            <button class="category__btn" data-filter="Mini-games">
+                Mini-games<span class="category__count">2</span>
+            </button>
+            <button class="category__btn" data-filter="Full-stack">
+                Full-stack<span class="category__count">2</span>
+            </button>
         </div>
         <div class="work__projects">
             <a href="#" class="project" target="blank" datatype="Website">
@@ -252,12 +261,22 @@
                     <span>Clone coding with HTML, CSS</span>
                 </div>
             </a>
+            <a href="#" class="project" target="blank" datatype="Full-stack">
+                <img
+                        src="img/project/macbook.png"
+                        alt="macbook"
+                        class="project__img">
+                <div class="project__description">
+                    <h3>Macbook</h3>
+                    <span>Clone coding with HTML, CSS</span>
+                </div>
+            </a>
         </div>
     </div>
 </section>
 
 <!--Testimonials-->
-<section class="section" id="testimonials">
+<section id="testimonials" class="section">
     <div class="section__container">
         <h1>Testimonials</h1>
         <h3>See what they say about me</h3>
@@ -266,7 +285,8 @@
 
                 <div class="testimonial__speech-bubble">
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                        Aspernatur beatae deleniti dolore earum eligendi expedita facilis illo ipsum itaque provident quam
+                        Aspernatur beatae deleniti dolore earum eligendi expedita facilis illo ipsum itaque provident
+                        quam
                         quasi quia,
                         sequi sit temporibus? Doloremque exercitationem fuga sint!
                     </p>
@@ -287,7 +307,8 @@
                 >
                 <div class="testimonial__speech-bubble">
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                        Aspernatur beatae deleniti dolore earum eligendi expedita facilis illo ipsum itaque provident quam
+                        Aspernatur beatae deleniti dolore earum eligendi expedita facilis illo ipsum itaque provident
+                        quam
                         quasi quia,
                         sequi sit temporibus? Doloremque exercitationem fuga sint!
                     </p>
@@ -300,7 +321,7 @@
 </section>
 
 <!--Contact-->
-<section class="section" id="contact">
+<section id="contact" class="section">
     <h1 class="contact__title">Let's talk</h1>
     <h2 class="contact__email">elinapark0818@gmail.com</h2>
     <div class="contact__github">
@@ -310,5 +331,8 @@
     </div>
     <p class="contact__rights">2021 Elina coding - All right reserved</p>
 </section>
+
+<script type="text/javascript" src="main.js" defer></script>
+
 </body>
 </html>
