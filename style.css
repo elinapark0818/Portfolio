@@ -70,7 +70,7 @@ button {
 h1 {
     font-size: var(--font-large);
     font-weight: var(--weight-bold);
-    color: var(--color-dark-pink);
+    color: var(--color-pink-white);
     margin: 16px 0;
 }
 
@@ -84,7 +84,7 @@ h2 {
 h3 {
     font-size: var(--font-regular);
     font-weight: var(--font-regular);
-    color: var(--color-dark-pink);
+    color: var(--color-pink-white);
     margin: 8px 0;
 }
 
@@ -193,6 +193,10 @@ p {
     margin: auto;
 }
 
+.section__container p {
+    color: var(--color-white);
+}
+
 /*About*/
 
 .about__majors {
@@ -218,7 +222,7 @@ p {
 }
 .major__icon:hover i {
     color: var(--color-pink-white);
-    transform: rotate(30deg) scale(1.0, 1.0);
+    transform: rotate(30deg) scale(1.1);
 }
 
 .major__title, .major__description {
@@ -262,9 +266,6 @@ p {
     color: var(--color-white);
 }
 
-.section__container p {
-    color: var(--color-white);
-}
 
 .skillset {
     display: flex;
@@ -279,6 +280,11 @@ p {
 .skillset__left {
     flex-basis: 60%;
     background-color: var(--color-dark-pink);
+    padding: 20px 40px;
+}
+
+.skill {
+    margin-bottom: 32px;
 }
 
 .skill_description {
@@ -308,7 +314,8 @@ p {
     background-color: var(--color-hot-pink);
 }
 
-.tools, .etc {
+.tools,
+.etc {
     padding: 20px;
 }
 
@@ -373,8 +380,6 @@ p {
     max-width: 100%;
     max-height: 100%;
     align-self: center;
-    display: flex;
-    flex-wrap: wrap;
 }
 
 .project__description {
@@ -456,4 +461,34 @@ p {
 
 .testimonial__speech-bubble a {
     color: var(--color-pink);
+}
+
+/*Contact*/
+
+#contact {
+    background-color: var(--color-pink-white);
+}
+
+.contact__title,
+.contact__email,
+.contact__rights {
+    color: var(--color-white);
+}
+
+.contact__title {
+    margin: 32px 0;
+}
+
+.contact__links {
+    font-size: var(--font-large);
+    margin: 24px 0;
+    transition: all var(--animation-duration) ease-in;
+}
+
+.contact__github {
+    font-size: var(--font-large);
+}
+
+.contact__github i:hover {
+    filter: invert(100%);
 }
