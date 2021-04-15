@@ -41,14 +41,17 @@ navbarMenu.addEventListener('click', (event) => {
     scrollTo.scrollIntoView({behavior: "smooth"});
 });
 
+const contactMe = document.querySelector('.home__contact');
+contactMe.addEventListener('click', (event) => {
+    const target = event.target;
+    const link = target.dataset.link;
+    if (link == null) {
+        return;
+    }
 
+    console.log(event.target.dataset.link);
+    const scrollTo = document.querySelector(link);
+    scrollTo.scrollIntoView({behavior: "smooth"});
+})
 
-//Element.scrollIntoView
-// const about = document.querySelector('about');
-//
-// document.addEventListener('click', () => {
-//     console.log(aboutClick.scrollIntoView);
-//     console.log(`aboutClick: ${aboutClick}`);
-//
-// });
 
