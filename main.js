@@ -1,4 +1,6 @@
 'use strict';
+
+// Make navbar transparent when it is on the top
 console.log('test');
 
 const navbar = document.querySelector('#navbar');
