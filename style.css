@@ -134,24 +134,15 @@ p {
 .navbar__menu__item {
     padding: 8px 12px;
     margin: 0 4px;
-    cursor: pointer;
-    border-radius: var(--size-border-radius);
     color: var(--color-white);
-}
-
-.navbar__menu__item.active {
-    border: 1px solid var(--color-white);
-    font-weight: var(--weight-semi-bold);
-    background-color: var(--color-pink-white);
-    opacity: 0.5;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: var(--size-border-radius);
 }
 
 .navbar__menu__item:hover {
-    color: var(--color-white);
-    border: 1px solid var(--color-white);
-    font-weight: var(--weight-semi-bold);
+    border-color: var(--color-white);
     background-color: var(--color-pink-white);
-    opacity: 0.5;
 }
 
 
@@ -361,7 +352,7 @@ p {
     color: var(--color-white);
 }
 
-.category__btn.active .category__count,
+.category__btn.selected .category__count,
 .category__btn:hover .category__count {
     opacity: 1;
     top: 0;
