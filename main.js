@@ -10,7 +10,7 @@ document.addEventListener('scroll', () => {
     // console.log(`navbarHeight: ${navbarHeight}`);
     if (window.scrollY > navbarHeight) {
         navbar.classList.add('navbar--dark');
-    }else {
+    } else {
         navbar.classList.remove('navbar--dark');
     }
 });
@@ -68,9 +68,38 @@ arrowUp.addEventListener('click', () => {
     scrollIntoView('#home');
 })
 
+//Projects
+const workBtnContainer = document.querySelector('.work__categories');
+const projectContainer = document.querySelector('.work__projects');
+const projects = document.querySelectorAll('.project');
+workBtnContainer.addEventListener('click', (event) => {
+    const filter = event.target.dataset.filter || event.target.parentNode.dataset.filter;
+    if (filter == null) {
+        return;
+    }
+    projectContainer.classList.add('animation-out');
 
+    setTimeout(() => {
 
+        projects.forEach(project => {
+            console.log(project.dataset.type);
+            if (filter === '*' || filter === project.dataset.type) {
+                project.classList.remove('invisible');
+            } else {
+                project.classList.add('invisible');
+            }
+        });
 
+        projectContainer.classList.remove('animation-out');
+    }, 300);
+
+    // for (let project of projects)
+
+    // for (let i = 0; i < projects.length; i++) {
+    //     let project;
+    //     project = projects[i];
+    // }
+});
 
 
 
