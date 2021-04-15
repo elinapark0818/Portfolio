@@ -1,7 +1,6 @@
 'use strict';
 
 // Make navbar transparent when it is on the top
-console.log('test');
 
 const navbar = document.querySelector('#navbar');
 const navbarHeight = navbar.getBoundingClientRect().height;
@@ -16,9 +15,7 @@ document.addEventListener('scroll', () => {
     }
 });
 
-
 // navbar-height 쉽게 찾기
-
 // const navbar = document.querySelector('#navbar');
 // const navbarHeight = navbar.scrollHeight;
 //
@@ -29,3 +26,29 @@ document.addEventListener('scroll', () => {
 //         navbar.classList.remove('navbar-dark');
 //     }
 // });
+
+//Handle scrolling when tapping on the navbar menu
+const navbarMenu = document.querySelector('.navbar__menu');
+navbarMenu.addEventListener('click', (event) => {
+    const target = event.target;
+    const link = target.dataset.link;
+    if (link == null) {
+        return;
+    }
+
+    console.log(event.target.dataset.link);
+    const scrollTo = document.querySelector(link);
+    scrollTo.scrollIntoView({behavior: "smooth"});
+});
+
+
+
+//Element.scrollIntoView
+// const about = document.querySelector('about');
+//
+// document.addEventListener('click', () => {
+//     console.log(aboutClick.scrollIntoView);
+//     console.log(`aboutClick: ${aboutClick}`);
+//
+// });
+
