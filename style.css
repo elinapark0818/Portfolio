@@ -148,7 +148,7 @@ p {
 
 .navbar__toggle-btn {
     position: absolute;
-    top: 75px;
+    top: 50px;
     right: 32px;
     font-size: 24px;
     color: var(--color-white);
@@ -192,7 +192,6 @@ p {
 }
 
 /*Section common*/
-
 .section {
     padding: 50px;
     text-align: center;
@@ -274,6 +273,7 @@ p {
 #skills {
     background: var(--color-pink-white);
     margin-bottom: 32px;
+    max-width: 1200px;
 }
 
 #skills h1, h2 {
@@ -301,7 +301,7 @@ p {
     margin-bottom: 32px;
 }
 
-.skill_description {
+.skill__description {
     display: flex;
     justify-content: space-between;
     padding: 20px 40px;
@@ -430,7 +430,7 @@ p {
 }
 
 .project__description h3 {
-    color: var(--color-white);
+    color: var(--color-light-orange);
 }
 
 .project__description h3:after {
@@ -438,9 +438,9 @@ p {
     display: block;
     position: relative;
     left: 50%;
-    width: 25px;
+    width: 50px;
     height: 2px;
-    margin-left: -12px;
+    transform: translateX(-50%);
     margin-top: 8px;
     background-color: var(--color-dark-white);
 }
@@ -448,6 +448,7 @@ p {
 /*Testimonial*/
 #testimonials {
     background-color: var(--color-dark-white);
+    max-width: 1200px;
 }
 
 .testimonials {
@@ -494,6 +495,7 @@ p {
 
 #contact {
     background-color: var(--color-pink-white);
+    padding: 20px;
 }
 
 .contact__title,
@@ -552,12 +554,22 @@ p {
     #navbar {
         flex-direction: column;
         align-items: flex-start;
+        background-color: var(--color-pink-white);
     }
+
+    #navbar.navbar--dark {
+        padding: 16px;
+    }
+
     .navbar__menu {
         flex-direction: column;
         text-align: center;
         width: 100%;
         display: none;
+    }
+
+    .navbar__menu.open {
+        display: block;
     }
 
     .about__majors {
