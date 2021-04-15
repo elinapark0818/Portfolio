@@ -115,8 +115,6 @@ p {
 .navbar__logo {
     font-size: var(--font-medium);
     font-weight: var(--weight-semi-bold);
-    list-style: none;
-
 }
 
 .navbar__logo img {
