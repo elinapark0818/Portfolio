@@ -102,8 +102,7 @@ p {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 5px;
-    background-color: transparent;
+    background-color: var(--color-pink-white);
     transition: all var(--animation-duration) ease-in-out;
     z-index: 1;
 }
@@ -114,16 +113,11 @@ p {
     opacity: 0.9;
 }
 
-#navbar.navbar--dark img {
-    display: block;
+#navbar img {
     width: 50px;
     height: 50px;
     padding: 5px;
-}
-
-
-.navbar__logo a {
-    left: 60px;
+    margin: 5px;
 }
 
 .navbar__logo {
@@ -132,12 +126,6 @@ p {
     color: var(--color-white);
 }
 
-.navbar__logo img {
-    display: block;
-    width: 50px;
-    height: 50px;
-    padding: 5px;
-}
 
 .navbar__logo a {
     font-size: var(--font-regular);
@@ -599,20 +587,8 @@ p {
 
     #navbar {
         flex-direction: column;
-        justify-content: center;
         align-items: flex-start;
-        background-color: transparent;
-    }
-
-    .navbar__logo img {
-        display: block;
-        width: 50px;
-        height: 50px;
-        padding: 5px;
-    }
-
-    .navbar__logo a {
-        left: 60px;
+        background-color: var(--color-pink-white);
     }
 
     #navbar.navbar__logo {
@@ -622,16 +598,16 @@ p {
         background-color: red;
     }
 
+    .navbar__logo a {
+        font-size: var(--font-regular);
+        position: absolute;
+        top: 25px;
+        left: 60px;
+    }
+
     #navbar.navbar--dark {
         padding: 0;
         top: 0;
-    }
-
-    #navbar.navbar--dark img {
-        display: block;
-        width: 50px;
-        height: 50px;
-        padding: 5px;
     }
 
     .navbar__menu {
@@ -641,18 +617,13 @@ p {
         display: none;
     }
 
-
     .navbar__menu.open {
         display: block;
         width: 100%;
-        margin: 0;
         background-color: var(--color-pink-white);
         opacity: 0.9;
-        margin-top: 250px;
-        border-radius: var(--size-border-radius);
+        margin: 0;
     }
-
-
 
     .section {
         padding: 16px;
@@ -709,7 +680,6 @@ p {
         margin-top: 16px;
         top: 16px;
     }
-
 
     .arrow-up {
         width: 50px;
