@@ -139,5 +139,7 @@ const sectionIds = [
 ];
 
 const sections = sectionIds.map(id => document.querySelector(id));
-
+const navItems = sectionIds.map(id => document.querySelector(`[data-link="${id}"]`)
+);
+console.log(navItems);
 console.log(sections);
