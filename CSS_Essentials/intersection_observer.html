@@ -63,7 +63,13 @@
     // const observer = new IntersectionObserver(callback);
 
     const observer = new IntersectionObserver((entries, observer) => {
-        console.log('observer!');
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                console.log(entry.target);
+            } else {
+                console.error(entry.target);
+            }
+        })
     });
     boxes.forEach(box => observer.observe(box));
 </script>
