@@ -124,8 +124,6 @@ function scrollIntoView(selector) {
 }
 
 
-
-
 // 1. 모든 섹션 요소들을 가지고 온다.
 const sectionIds = [
     '#home',
@@ -141,24 +139,35 @@ const navItems = sectionIds.map(id => document.querySelector(`[data-link="${id}"
 );
 
 // 2. IntersectionObserver 를 이용해서 모든 섹션들을 관찰한다
+
+let selectedNavItem = navItems[0];
+
 const observerOptions = {
-    root: null,
+    root      : null,
     rootMargin: '0px',
-    threshold: 0.3,
+    threshold : 0.3,
 }
 
 const observerCallback = (entries, observer) => {
     entries.forEach(entry => {
-        if(!entry.isIntersecting) {
+        if (!entry.isIntersecting) {
             const index = sectionIds.indexOf(`#${entry.target.id}`);
-            console.log(index, entry.target.id);
+            // 스크롤링이 아래로 되어서 페이지가 올라옴
+            let selectedIndex;
+            if (entry.boundingClientRect.y < 0) {
+                selectedIndex = index + 1;
+            } else {
+                selectedIndex = index - 1;
+            }
+            selectedNavItem.classList.remove('active');
+            selectedNavItem = navItems[selectedIndex];
+            selectedNavItem.classList.add('active');
         }
     });
-}
+};
 
 const observer = new IntersectionObserver(observerCallback, observerOptions);
 sections.forEach(section => observer.observe(section));
-
 
 
 // 3. 보여지는 섹션에 해당하는 메뉴 아이템을 활성화 시킨다
