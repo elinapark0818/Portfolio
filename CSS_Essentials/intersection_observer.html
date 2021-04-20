@@ -14,7 +14,7 @@
             height: 300px;
             margin: 80px auto;
             background-color: plum;
-            transition: 250ms;
+            transition: 2500ms;
         }
 
         .box.active {
@@ -65,9 +65,9 @@
     const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                console.log(entry.target);
+                entry.target.classList.add('active');
             } else {
-                console.error(entry.target);
+                entry.target.classList.remove('active');
             }
         })
     });
