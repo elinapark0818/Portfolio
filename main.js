@@ -150,7 +150,7 @@ const observerOptions = {
 
 const observerCallback = (entries, observer) => {
     entries.forEach(entry => {
-        if (!entry.isIntersecting) {
+        if (!entry.isIntersecting && entry.intersectionRatio > 0) {
             const index = sectionIds.indexOf(`#${entry.target.id}`);
             // 스크롤링이 아래로 되어서 페이지가 올라옴
             let selectedIndex;
