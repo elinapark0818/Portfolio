@@ -37,6 +37,7 @@ navbarMenu.addEventListener('click', (event) => {
     }
     navbarMenu.classList.remove('open');
     scrollIntoView(link);
+    selectNavItem(target);
 });
 
 //Navbar toggle button for small screen
@@ -140,8 +141,13 @@ const navItems = sectionIds.map(id => document.querySelector(`[data-link="${id}"
 
 // 2. IntersectionObserver 를 이용해서 모든 섹션들을 관찰한다
 
+let selectedNavIndex = 0;
 let selectedNavItem = navItems[0];
-
+function selectNavItem(selected) {
+    selectedNavItem.classList.remove('active');
+    selectedNavItem = selected;
+    selectedNavItem.classList.add('active');
+}
 const observerOptions = {
     root      : null,
     rootMargin: '0px',
@@ -153,15 +159,11 @@ const observerCallback = (entries, observer) => {
         if (!entry.isIntersecting && entry.intersectionRatio > 0) {
             const index = sectionIds.indexOf(`#${entry.target.id}`);
             // 스크롤링이 아래로 되어서 페이지가 올라옴
-            let selectedIndex;
             if (entry.boundingClientRect.y < 0) {
-                selectedIndex = index + 1;
+                selectedNavIndex = index + 1;
             } else {
-                selectedIndex = index - 1;
+                selectedNavIndex = index - 1;
             }
-            selectedNavItem.classList.remove('active');
-            selectedNavItem = navItems[selectedIndex];
-            selectedNavItem.classList.add('active');
         }
     });
 };
@@ -171,3 +173,12 @@ sections.forEach(section => observer.observe(section));
 
 
 // 3. 보여지는 섹션에 해당하는 메뉴 아이템을 활성화 시킨다
+
+window.addEventListener('wheel', () => {
+    if (window.scrollY === 0) {
+        selectedNavIndex = 0;
+    } else if (window.scrollY + window.innerHeight === document.body.clientHeight) {
+        selectedNavIndex = navItems.length - 1;
+    }
+    selectNavItem(navItems[selectedNavIndex]);
+});
