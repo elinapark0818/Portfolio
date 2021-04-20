@@ -54,23 +54,27 @@
     // })
 
     const boxes = document.querySelectorAll('.box');
-    // console.log(boxes);
-
 
     // const callback = (entries, observer) => {
     //     console.log('observer!');
     // };
     // const observer = new IntersectionObserver(callback);
 
-    const observer = new IntersectionObserver((entries, observer) => {
+    const options = {
+        root: null, //viewport
+        rootMargin: '0px',
+        threshold: 0.2, // 0~1 (100%)
+    };
+    const callback = (entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('active');
             } else {
                 entry.target.classList.remove('active');
             }
-        })
-    });
+        });
+    };
+    const observer = new IntersectionObserver(callback, options);
     boxes.forEach(box => observer.observe(box));
 </script>
 </body>
