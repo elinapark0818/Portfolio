@@ -140,7 +140,7 @@ const sections = sectionIds.map(id => document.querySelector(id));
 const navItems = sectionIds.map(id => document.querySelector(`[data-link="${id}"]`)
 );
 
-// 2. IntersectionObserver를 이용해서 모든 섹션들을 관찰한다
+// 2. IntersectionObserver 를 이용해서 모든 섹션들을 관찰한다
 const observerOptions = {
     root: null,
     rootMargin: '0px',
@@ -149,7 +149,10 @@ const observerOptions = {
 
 const observerCallback = (entries, observer) => {
     entries.forEach(entry => {
-        console.log(entry.target);
+        if(!entry.isIntersecting) {
+            const index = sectionIds.indexOf(`#${entry.target.id}`);
+            console.log(index, entry.target.id);
+        }
     });
 }
 
