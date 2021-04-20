@@ -118,11 +118,7 @@ workBtnContainer.addEventListener('click', (event) => {
 });
 
 
-// Utility function
-function scrollIntoView(selector) {
-    const scrollTo = document.querySelector(selector);
-    scrollTo.scrollIntoView({behavior: "smooth"});
-}
+
 
 
 // 1. 모든 섹션 요소들을 가지고 온다.
@@ -148,6 +144,15 @@ function selectNavItem(selected) {
     selectedNavItem = selected;
     selectedNavItem.classList.add('active');
 }
+
+// Utility function
+function scrollIntoView(selector) {
+    const scrollTo = document.querySelector(selector);
+    scrollTo.scrollIntoView({behavior: "smooth"});
+    selectNavItem(navItems[sectionIds.indexOf(selector)]);
+}
+
+
 const observerOptions = {
     root      : null,
     rootMargin: '0px',
