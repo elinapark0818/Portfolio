@@ -58,7 +58,7 @@
 
     const boxes = document.querySelectorAll('.box');
     const options = {
-        root      : null, //viewport
+        root      : document.querySelector('.container'), //container size 기준
         rootMargin: '0px',
         threshold : 0.2, // 0~1 (100%)
     };
